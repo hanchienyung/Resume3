@@ -6,7 +6,7 @@
 </head>
 <body>
 <form action="#"
-      th:action="@{/process}"
+      th:action="@{/processski}"
       th:object="${skill}"
       method="post">
     <input type="hidden" th:field="*{id}" />
@@ -15,11 +15,11 @@
 
 
     Skills: <br />
-    &ensp;Degree&nbsp;<input type="text" th:field="*{skill}" />
+    &ensp;Skill&nbsp;<input type="text" th:field="*{skill}" />
     <span th:if="${#fields.hasErrors('skill')}"
           th:errors="*{skill}"></span><br />
 
-    &ensp;Major&nbsp;<input type="text" th:field="*{rating}" />
+    &ensp;Rating&nbsp;<input type="text" th:field="*{rating}" />
     <span th:if="${#fields.hasErrors('rating')}"
           th:errors="*{rating}"></span><br />
 

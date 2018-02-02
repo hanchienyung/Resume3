@@ -6,12 +6,16 @@
 </head>
 <body>
 <a href="/add">Add a Resume</a><br />
+<a href="/addedu">Add Education</a><br />
+<a href="/addexp">Add Experience</a><br />
+<a href="/addskills">Add Skills</a><br />
 <table>
+ <h1> Resume </h1>
 <tr>
     <td th:each="resume : ${resumes}">
         <span th:text="${resume.name}"></span><br />
         <span th:text="${resume.email}"></span><br />
-
+    </td>
 
     Education <br />
      <td th:each="education : ${educations}">
@@ -20,15 +24,16 @@
         <span th:text="${education.year}"></span><br />
         <span th:text="${education.school}"></span><br />
      </td>
-     <br />
+     <tr>
 
     Experience <br />
      <td th:each ="experience : ${experiences}">
-        <span th:text="${experience.title}"></span><br />
+        <span th:text="${experience.jobTitle}"></span><br />
         <span th:text="${experience.company}"></span><br />
-        <span th:text="${experience.seviceYear}"></span><br />
+        <span th:text="${experience.serviceYear}"></span><br />
         <span th:text="${experience.duties}"></span><br />
      </td>
+    </tr>
 
     <br />
     Skills <br />
@@ -36,7 +41,7 @@
         <span th:text="${skill.skill}"></span><br />
         <span th:text="${skill.rating}"></span><br />
      </td>
-</td>
+
 </tr>
 </table>
 </body>

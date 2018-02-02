@@ -30,11 +30,15 @@ public class ResumeController {
     @RequestMapping("/")
     public String listResume(Model model){
         model.addAttribute("resumes", resumeRepository.findAll());
+        model.addAttribute("educations", educationRepository.findAll());
+        model.addAttribute("experiences", experienceRepository.findAll());
+        model.addAttribute("skills", skillRepository.findAll());
         return "list";
     }
 
-    public String listEducation(Model model){
+   /* public String listEducation(Model model){
         model.addAttribute("educations", educationRepository.findAll());
+        model.addAttribute("experiences", experienceRepository.findAll());
         return "list";
     }
 
@@ -47,6 +51,7 @@ public class ResumeController {
         model.addAttribute("skills", skillRepository.findAll());
         return "list";
     }
+    */
 
     @GetMapping("/add")
     public String resumeForm(Model model){

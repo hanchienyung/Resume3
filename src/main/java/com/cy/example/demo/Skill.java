@@ -19,7 +19,7 @@ public class Skill {
     private String skill;
 
     @NotNull
-    @Size(min=1)
+    @Size(min=2)
     private String rating;
 
     public Skill() {
