@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Skills</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${skill}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+
+    <h1>Skills Form</h1>
+
+
+    Skills: <br />
+    &ensp;Degree&nbsp;<input type="text" th:field="*{skill}" />
+    <span th:if="${#fields.hasErrors('skill')}"
+          th:errors="*{skill}"></span><br />
+
+    &ensp;Major&nbsp;<input type="text" th:field="*{rating}" />
+    <span th:if="${#fields.hasErrors('rating')}"
+          th:errors="*{rating}"></span><br />
+
+
+    <br />
+    <input type="submit" value="Submit" />
+
+</form>
+</body>
+</html>

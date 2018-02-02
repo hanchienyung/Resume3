@@ -1,5 +1,7 @@
 package com.cy.example.demo;
 
+import com.sun.istack.internal.Nullable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,20 +24,20 @@ public class Resume {
     @Size(min=5)
     private String email;
 
-    @NotNull
+
+    /*@NotNull
     @Size(min=5)
     private String educationBSMajor;
+
 
     @NotNull
     @Size(min=5)
     private String educationBSSchool;
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String educationMSMajor;
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String educationMSSchool;
 
     @NotNull
@@ -51,16 +53,13 @@ public class Resume {
     private String experienceMostRecentDuties;
 
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String experiencePreviousTitle;
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String experiencePreviousCompany;
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String experiencePreviousDuties;
 
 
@@ -68,9 +67,9 @@ public class Resume {
     @Size(min=5)
     private String skill_1;
 
-    @NotNull
-    @Size(min=5)
+    @Nullable
     private String skill_2;
+    */
 
     public Resume() {
     }
@@ -100,13 +99,14 @@ public class Resume {
         this.email = email;
     }
 
-    public String getEducationBSMajor() {
-        return educationBSMajor;
+/*
+    public String getEducationBSMajor() { return educationBSMajor;
     }
 
     public void setEducationBSMajor(String educationBSMajor) {
         this.educationBSMajor = educationBSMajor;
     }
+
 
     public String getEducationBSSchool() {
         return educationBSSchool;
@@ -195,4 +195,5 @@ public class Resume {
     public void setSkill_2(String skill_2) {
         this.skill_2 = skill_2;
     }
+    */
 }

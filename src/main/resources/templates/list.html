@@ -7,30 +7,37 @@
 <body>
 <a href="/add">Add a Resume</a><br />
 <table>
-    <tr th:each="resume : ${resumes}">
+<tr>
+    <td th:each="resume : ${resumes}">
         <span th:text="${resume.name}"></span><br />
         <span th:text="${resume.email}"></span><br />
-    <br />
+
+
     Education <br />
-        <span th:text="${resume.educationMSMajor}"></span><br />
-        <span th:text="${resume.educationMSSchool}"></span><br />
-        <span th:text="${resume.educationBSMajor}"></span><br />
-        <span th:text="${resume.educationBSSchool}"></span><br />
-    <br />
-    Experience <br />
-        <span th:text="${resume.experienceMostRecentTitle}"></span><br />
-        <span th:text="${resume.experienceMostRecentCompany}"></span><br />
-        <span th:text="${resume.experienceMostRecentDuties}"></span><br />
+     <td th:each="education : ${educations}">
+        <span th:text="${education.major}"></span><br />
+        <span th:text="${education.degree}"></span><br />
+        <span th:text="${education.year}"></span><br />
+        <span th:text="${education.school}"></span><br />
+     </td>
      <br />
-        <span th:text="${resume.experiencePreviousTitle}"></span><br />
-        <span th:text="${resume.experiencePreviousCompany}"></span><br />
-        <span th:text="${resume.experiencePreviousDuties}"></span><br />
+
+    Experience <br />
+     <td th:each ="experience : ${experiences}">
+        <span th:text="${experience.title}"></span><br />
+        <span th:text="${experience.company}"></span><br />
+        <span th:text="${experience.seviceYear}"></span><br />
+        <span th:text="${experience.duties}"></span><br />
+     </td>
+
     <br />
     Skills <br />
-        <span th:text="${resume.skill_1}"></span><br />
-        <span th:text="${resume.skill_2}"></span><br />
-
+     <td th:each="skill : ${skills}">
+        <span th:text="${skill.skill}"></span><br />
+        <span th:text="${skill.rating}"></span><br />
+     </td>
+</td>
 </tr>
- </table>
+</table>
 </body>
 </html>

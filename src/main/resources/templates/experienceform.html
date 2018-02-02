@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Experience</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${experience}"
+      method="post">
+
+<h1>Experience: </h1> <br />
+&ensp;Job Title&nbsp;<input type="text" th:field="*{jobTitle}" />
+<span th:if="${#fields.hasErrors('jobTitle')}"
+      th:errors="*{jobTitle}"></span><br />
+
+&ensp;Company&nbsp;<input type="text" th:field="*{company}" />
+ <span th:if="${#fields.hasErrors('company')}"
+      th:errors="*{company}"></span><br />
+
+  Years of Service&nbsp;<input type="text" th:field="*{serviceYear}" />
+ <span th:if="${#fields.hasErrors('serviceYear')}"
+      th:errors="*{serviceYear}"></span><br />
+
+&ensp;Duties&nbsp;<input type="text" th:field="*{duties}" />
+ <span th:if="${#fields.hasErrors('duties')}"
+      th:errors="*{duties}"></span><br />
+
+<br />
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
