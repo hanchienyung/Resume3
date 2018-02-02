@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${resume}"
+      method="post">
+    <h1>Resume Form</h1>
+    <input type="hidden" th:field="*{id}" />
+    Name :<input type="text" th:field="*{name}" />
+    <span th:if="${#fields.hasErrors('name')}"
+          th:errors="*{name}"></span><br />
+
+    Email :<input type="text" th:field="*{email}" />
+    <span th:if="${#fields.hasErrors('email')}"
+          th:errors="*{email}"></span><br />
+    <br />
+    Education: <br />
+     &ensp;Degree/Major&nbsp;<input type="text" th:field="*{educationBSMajor}" />
+    <span th:if="${#fields.hasErrors('educationBSMajor')}"
+          th:errors="*{educationBSMajor}"></span><br />
+
+    &ensp;School/Year&nbsp;<input type="text" th:field="*{educationBSSchool}" />
+    <span th:if="${#fields.hasErrors('educationBSSchool')}"
+          th:errors="*{educationBSSchool}"></span><br />
+
+    <br />
+    &ensp;Degree/Major&nbsp;<input type="text" th:field="*{educationMSMajor}" />
+    <span th:if="${#fields.hasErrors('educationMSMajor')}"
+          th:errors="*{educationMSMajor}"></span><br />
+
+    &ensp;School/Year&nbsp;<input type="text" th:field="*{educationMSSchool}" />
+    <span th:if="${#fields.hasErrors('educationMSSchool')}"
+          th:errors="*{educationMSSchool}"></span><br />
+    <br />
+    Experience:  <br />
+    &ensp;Title&nbsp;<input type="text" th:field="*{experienceMostRecentTitle}" />
+    <span th:if="${#fields.hasErrors('experienceMostRecentTitle')}"
+          th:errors="*{experienceMostRecentTitle}"></span><br />
+
+    &ensp;Company/Year&nbsp;<input type="text" th:field="*{experienceMostRecentCompany}" />
+    <span th:if="${#fields.hasErrors('experienceMostRecentCompany')}"
+          th:errors="*{experienceMostRecentCompany}"></span><br />
+
+    &ensp;Duties&nbsp;<input type="text" th:field="*{experienceMostRecentDuties}" />
+    <span th:if="${#fields.hasErrors('experienceMostRecentDuties')}"
+          th:errors="*{experienceMostRecentDuties}"></span><br />
+    <br />
+    &ensp;Title&nbsp;<input type="text" th:field="*{experiencePreviousTitle}" />
+    <span th:if="${#fields.hasErrors('experiencePreviousTitle')}"
+          th:errors="*{experiencePreviousTitle}"></span><br />
+
+    &ensp;Company/Year&nbsp;<input type="text" th:field="*{experiencePreviousCompany}" />
+    <span th:if="${#fields.hasErrors('experiencePreviousCompany')}"
+          th:errors="*{experiencePreviousCompany}"></span><br />
+
+    &ensp;Duties&nbsp;<input type="text" th:field="*{experiencePreviousDuties}" />
+    <span th:if="${#fields.hasErrors('experiencePreviousDuties')}"
+          th:errors="*{experiencePreviousDuties}"></span><br />
+    <br />
+    Skills : <br />
+    &ensp;Skill/rating&nbsp;<input type="text" th:field="*{skill_1}" />
+    <span th:if="${#fields.hasErrors('skill_1')}"
+          th:errors="*{skill_1}"></span><br />
+
+    &ensp;Skill/rating&nbsp;<input type="text" th:field="*{skill_2}" />
+    <span th:if="${#fields.hasErrors('skill_2')}"
+          th:errors="*{skill_2}"></span><br />
+
+    <br />
+    <input type="submit" value="Submit" />
+
+</form>
+</body>
+</html>
