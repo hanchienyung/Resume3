@@ -36,22 +36,6 @@ public class ResumeController {
         return "list";
     }
 
-   /* public String listEducation(Model model){
-        model.addAttribute("educations", educationRepository.findAll());
-        model.addAttribute("experiences", experienceRepository.findAll());
-        return "list";
-    }
-
-    public String listExperience(Model model){
-        model.addAttribute("experiences", experienceRepository.findAll());
-        return "list";
-    }
-
-    public String listSkills(Model model){
-        model.addAttribute("skills", skillRepository.findAll());
-        return "list";
-    }
-    */
 
     @GetMapping("/add")
     public String resumeForm(Model model){

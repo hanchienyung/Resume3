@@ -16,21 +16,21 @@ public class Skill {
 
     @NotNull
     @Size(min=2)
-    private String skill;
+    private String skillname;
 
     @NotNull
-    @Size(min=2)
+    @Size(min=1)
     private String rating;
 
     public Skill() {
     }
 
-    public String getSkill() {
-        return skill;
+    public String getSkillname() {
+        return skillname;
     }
 
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public void setSkillname(String skillname) {
+        this.skillname = skillname;
     }
 
     public String getRating() {

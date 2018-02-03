@@ -15,8 +15,8 @@
 
 
     Skills: <br />
-    &ensp;Skill&nbsp;<input type="text" th:field="*{skill}" />
-    <span th:if="${#fields.hasErrors('skill')}"
+    &ensp;Skill&nbsp;<input type="text" th:field="*{skillname}" />
+    <span th:if="${#fields.hasErrors('skillname')}"
           th:errors="*{skill}"></span><br />
 
     &ensp;Rating&nbsp;<input type="text" th:field="*{rating}" />

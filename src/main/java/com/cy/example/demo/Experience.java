@@ -23,7 +23,7 @@ public class Experience {
     private String company;
 
     @NotNull
-    @Size(min=3)
+    @Size(min=1)
     private String serviceYear;
 
     @NotNull
